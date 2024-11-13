@@ -1,0 +1,18 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-envelope" viewBox="0 0 32 32">
+<path d="M20.139 18.934l9.787-7.999-13.926-9.833-13.89 9.833 9.824 8.032 8.205-0.033zM12.36 19.936l-9.279 10.962h25.876l-9.363-10.9-7.234-0.062zM20.705 19.803l9.291 11.084v-18.952l-9.291 7.868zM2.004 11.935v18.952l9.291-11.084-9.291-7.868z"></path>
+</symbol>
+<symbol id="icon-image" viewBox="0 0 24 24">
+<path d="M11 8.501c0 1.381-1.119 2.5-2.5 2.5s-2.5-1.119-2.5-2.5c0-1.381 1.119-2.5 2.5-2.5s2.5 1.119 2.5 2.5z"></path>
+<path d="M16 10c-2 0-3 3-4.5 3s-1.499-1-3.5-1c-2 0-3.001 4-3.001 4h14.001c0 0-1-6-3-6z"></path>
+<path d="M20 3h-16c-1.103 0-2 0.897-2 2v12c0 1.103 0.897 2 2 2h16c1.103 0 2-0.897 2-2v-12c0-1.103-0.897-2-2-2zM20 17h-16v-12h16v12z"></path>
+</symbol>
+<symbol id="icon-home" viewBox="0 0 32 32">
+<path d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+</symbol>
+<symbol id="icon-menu" viewBox="0 0 20 20">
+<path d="M0 3h20v2h-20v-2zM0 9h20v2h-20v-2zM0 15h20v2h-20v-2z"></path>
+</symbol>
+</defs>
+</svg>

@@ -1,0 +1,30 @@
+.hero {
+  position: relative;
+  background-image: url("https://t3.ftcdn.net/jpg/04/23/50/24/360_F_423502413_wFPUF3ti7Ga8Xsx212nyV7Xxd87DbZyN.jpg");
+}
+.love__list {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heart__img {
+  cursor: pointer;
+  width: 260px;
+  height: 260px;
+  @media screen and (min-width: 468px) {
+    width: 350px;
+    height: 350px;
+  }
+}
+.love__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  color: black;
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
+}
