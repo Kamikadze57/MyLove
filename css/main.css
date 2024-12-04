@@ -188,6 +188,76 @@ address {
 .lyrics {
   position: relative;
   background-image: url("https://t3.ftcdn.net/jpg/04/23/50/24/360_F_423502413_wFPUF3ti7Ga8Xsx212nyV7Xxd87DbZyN.jpg");
+  height: 89vh;
+}
+
+.lyrics__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 480px) {
+  .lyrics__list {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lyrics__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-top: 40px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lyrics__list {
+    padding-top: 50px;
+    gap: 80px;
+  }
+}
+
+.lyrics__item {
+  padding: 5px;
+  background-color: #f5f4fa;
+  border: 1px solid #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.lyrics__text {
+  font-size: 14px;
+}
+@media screen and (min-width: 480px) {
+  .lyrics__text {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lyrics__text {
+    font-size: 18px;
+  }
 }
 
 .menu-open {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Тексты для моей любимой 🤍</title>
     <link rel="icon" href="./images/favicon.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
@@ -14,73 +14,106 @@
   </head>
   <body>
     <header class="header">
-        <div class="container header__container">
-          <a class="logo" href="./index.html"><img src="./images/favicon.png" alt="logo"/></a>
-          <button class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="mobile-menu__icon">
-              <use href="./images/icons.svg#icon-menu"></use>
+      <div class="container header__container">
+        <a class="logo" href="./index.html"><img src="./images/favicon.png" alt="logo"/></a>
+        <button class="menu-open js-open-menu" aria-expanded="false" aria-controls="mobile-menu" >
+          <svg class="mobile-menu__icon">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <nav class="nav">
+          <ul class="nav__list list">
+            <li class="nav__item">
+              <a class="nav__link link" href="./index.html">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link current" href="./lyrics.html">Тексты</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link link" href="">Скоро..</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="menu-toggle js-close-menu">
+            <svg class="menu-toggle__icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24" >
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" ></path>
             </svg>
           </button>
-          <nav class="nav">
-            <ul class="nav__list list">
-              <li class="nav__item">
-                <a class="nav__link link" href="./index.html">Главная</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link link current" href="./lyrics.html">Тексты</a>
-              </li>
-              <li class="nav__item">
-                <a class="nav__link link" href="">Скоро..</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="menu-container js-menu-container" id="mobile-menu">
-            <button class="menu-toggle js-close-menu">
-              <svg class="menu-toggle__icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24" >
-                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          <ul class="mobile-menu-pages list">
+            <li class="mobile-menu-pages__item">
+              <svg class="mobile-menu-pages__icon">
+                <use href="./images/icons.svg#icon-home"></use>
               </svg>
-            </button>
-            <ul class="mobile-menu-pages list">
-              <li class="mobile-menu-pages__item">
-                <svg class="mobile-menu-pages__icon">
-                  <use href="./images/icons.svg#icon-home"></use>
-                </svg>
-                <a href="./index.html" class="link mobile-menu-pages__link">Главная</a>
-              </li>
-              <li class="mobile-menu-pages__item">
-                <svg class="mobile-menu-pages__icon">
-                  <use href="./images/icons.svg#icon-envelope" style="fill: #ff7398;"></use>
-                </svg>
-                <a href="./lyrics.html" class="link mobile-menu-pages__link current">Тексты</a>
-              </li>
-              <li class="mobile-menu-pages__item">
-                <svg class="mobile-menu-pages__icon">
-                  <use href="./images/icons.svg#icon-image"></use>
-                </svg>
-                <a href="" class="link mobile-menu-pages__link">Скоро..</a>
-              </li>
-            </ul>
-          </div>
+              <a href="./index.html" class="link mobile-menu-pages__link">Главная</a>
+            </li>
+            <li class="mobile-menu-pages__item">
+              <svg class="mobile-menu-pages__icon">
+                <use href="./images/icons.svg#icon-envelope" style="fill: #ff7398"></use>
+              </svg>
+              <a href="./lyrics.html" class="link mobile-menu-pages__link current" >Тексты</a>
+            </li>
+            <li class="mobile-menu-pages__item">
+              <svg class="mobile-menu-pages__icon">
+                <use href="./images/icons.svg#icon-image"></use>
+              </svg>
+              <a href="" class="link mobile-menu-pages__link">Скоро..</a>
+            </li>
+          </ul>
         </div>
-      </header>
-      <main class="main">
-        <section class="lyrics">
-            <ul class="lyrics__list list">
-                <li class="lyrics__item">
-                    <p class="lyrics__text"></p>
+      </div>
+    </header>
+    <main class="main">
+      <section class="lyrics">
+        <div class="container">
+          <ul class="lyrics__list list">
+            <li class="lyrics__item">
+              <div class="first__item__container">
+                <p class="lyrics__text">
+                  Как солнца луч, что согревает вьюгу,<br/>
+                  Ты в сердце мне вселяешь светлый мир.<br/>
+                  Твоё добро, как нежная сотуга,<br/>
+                  Лечит все раны, заживляет шрамы.</p>
+              </div>
+              <div class="second__item__container">
+                <p class="lyrics__text">Люблю твои глаза, в них небо тает,<br/>
+                И голос твой, что шепчет мне во сне.<br/>
+                С тобой я счастлив, большего не надо,<br/>
+                Любовь моя к тебе – как бездна, без конца.</p>
+            </div>
+            </li>
+            <li class="lyrics__item">
+              <div class="first__item__container">
+                <p class="lyrics__text">
+                  Ты – муза вдохновенья моего,<br/>
+                  Мой идеал, моя звезда.<br/>
+                  Любовь к тебе моя, как далёкая звезда,<br/>
+                  Растёт и светит без конца.</p>
+              </div>
+              <div class="second__item__container">
+                <p class="lyrics__text">
+                  Твоя ласка согревает душу,<br/>
+                  Как теплый луч в холодный день.<br/>
+                  С тобой я чувствую себя как нужно,<br/>
+                  Будто мы созданы для встреч.
+                </p>
+              </div>
+            </li>
+            <li class="lyrics__item">
+              <div class="first__item__container">
+                <p class="lyrics__text">Твои волосы, как шелк, что ветер треплет,<br/>
+                  Глаза твои - два алмаза серых.<br/>
+                  С тобой мы как два дерева, что ветви сплели,<br/>
+                  И корни наши глубоко вросли.</p>
+              </div>
                 </li>
-                <li class="lyrics__item">
-                    <p class="lyrics__text"></p>
-                </li>
-                <li class="lyrics__item">
-                    <p class="lyrics__text"></p>
-                </li>
-                <li class="lyrics__item">
-                    <p class="lyrics__text"></p>
-                </li>
-            </ul>
-        </section>
-      </main>
-      <script src="./js/mobile-menu.js"></script>
+                <!-- <li class="lyrics__item">
+                  <p class="lyrics__text"></p>
+                </li> -->
+              </ul>
+            </div>
+      </section>
+    </main>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

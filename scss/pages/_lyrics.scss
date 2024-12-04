@@ -1,4 +1,43 @@
 .lyrics {
-    position: relative;
-    background-image: url("https://t3.ftcdn.net/jpg/04/23/50/24/360_F_423502413_wFPUF3ti7Ga8Xsx212nyV7Xxd87DbZyN.jpg");
+  position: relative;
+  background-image: url("https://t3.ftcdn.net/jpg/04/23/50/24/360_F_423502413_wFPUF3ti7Ga8Xsx212nyV7Xxd87DbZyN.jpg");
+  // Убрать высоту после обновы нормальной
+  height: 89vh;
+}
+.lyrics__list {
+  @include flex(40px);
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 480px) {
+    padding-top: 30px;
   }
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    padding-top: 40px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 50px;
+    gap: 80px;
+  }
+}
+.lyrics__item {
+  padding: 5px;
+  background-color: $bg-ligth-gray;
+  border: 1px solid $main-color;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.lyrics__text {
+  font-size: 14px;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+}
