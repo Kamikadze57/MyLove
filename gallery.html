@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Моей любимой 🤍</title>
+    <title>Галерея 🤍</title>
     <link rel="icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,13 +23,13 @@
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
-              <a class="nav__link link current" href="./index.html">Главная</a>
+              <a class="nav__link link" href="./index.html">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link link" href="./lyrics.html">Тексты</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link" href="./gallery.html">Галерея</a>
+              <a class="nav__link link current" href="./gallery.html">Галерея</a>
             </li>
           </ul>
         </nav>
@@ -41,10 +41,10 @@
           </button>
           <ul class="mobile-menu-pages list">
             <li class="mobile-menu-pages__item">
-              <svg class="mobile-menu-pages__icon current">
+              <svg class="mobile-menu-pages__icon">
                 <use href="./images/icons.svg#home"></use>
               </svg>
-              <a class="link mobile-menu-pages__link current" href="./index.html">Главная</a>
+              <a class="link mobile-menu-pages__link" href="./index.html">Главная</a>
             </li>
             <li class="mobile-menu-pages__item">
               <svg class="mobile-menu-pages__icon">
@@ -53,32 +53,41 @@
               <a class="link mobile-menu-pages__link" href="./lyrics.html">Тексты</a>
             </li>
             <li class="mobile-menu-pages__item">
-              <svg class="mobile-menu-pages__icon">
+              <svg class="mobile-menu-pages__icon current">
                 <use href="./images/icons.svg#image"></use>
               </svg>
-              <a class="link mobile-menu-pages__link" href="./gallery.html">Галерея</a>
+              <a class="link mobile-menu-pages__link current" href="./gallery.html">Галерея</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="gallery">
         <div class="container">
-          <ul class="love__list list">
-            <li class="love__item">
-              <svg class="heart__svg">
-                <use href="./images/icons.svg#heart" data-love-heart></use>
-              </svg>
-            </li>
-            <li class="love__item">
-              <p class="love__text" data-love-text></p>
-            </li>
-          </ul>
+          <h2 class="gallery__title">Minecraft</h2>
+          <ul class="gallery__list list" galleryMinecraft></ul>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="container">
+          <h2 class="gallery__title">GTA5RP</h2>
+          <ul class="gallery__list list" galleryGta></ul>
+        </div>
+        <div class="lightbox" lightbox>
+          <div class="lightbox__overlay" lightboxOverlay></div>
+          <div class="lightbox__content" lightboxContent>
+            <img class="gallery__image" galleryImage />
+          </div>
+          <button type="button" class="lightbox__button" data-action="close-lightbox" galleryCloseBtn>
+            <svg class="close-lightbox__svg" width="24" height="24">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
         </div>
       </section>
     </main>
-    <script src="./js/imgswap.js"></script>
+    <script type="module" src="./js/gallery.js"></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

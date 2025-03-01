@@ -50,6 +50,11 @@ address {
   font-style: normal;
 }
 
+main {
+  position: relative;
+  background-image: url("../images/background/background.jpg");
+}
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
@@ -75,7 +80,7 @@ address {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom: 1px solid #ff7398;
-  background-image: url("../images/header-back.jpg");
+  background-image: url("../images/background/header-background.jpg");
   background-size: contain;
 }
 @media screen and (min-width: 768px) {
@@ -134,11 +139,6 @@ address {
   color: #ff7398;
 }
 
-.hero {
-  position: relative;
-  background-image: url("../images/back.jpg");
-}
-
 .love__list {
   height: 90vh;
   display: -webkit-box;
@@ -173,7 +173,6 @@ address {
           transform: translate(-50%, -50%);
   font-size: 19px;
   color: #212121;
-  font-size: 400;
 }
 @media screen and (min-width: 480px) {
   .love__text {
@@ -182,9 +181,23 @@ address {
 }
 
 .lyrics {
-  position: relative;
-  background-image: url("https://t3.ftcdn.net/jpg/04/23/50/24/360_F_423502413_wFPUF3ti7Ga8Xsx212nyV7Xxd87DbZyN.jpg");
-  height: 89vh;
+  padding-top: 20px;
+  height: 90vh;
+}
+@media screen and (min-width: 480px) {
+  .lyrics {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .lyrics {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .lyrics {
+    padding-top: 50px;
+  }
 }
 
 .lyrics__list {
@@ -192,7 +205,6 @@ address {
   display: -ms-flexbox;
   display: flex;
   gap: 40px;
-  padding-top: 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -201,16 +213,10 @@ address {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (min-width: 480px) {
-  .lyrics__list {
-    padding-top: 30px;
-  }
-}
 @media screen and (min-width: 768px) {
   .lyrics__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-top: 40px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -223,7 +229,6 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .lyrics__list {
-    padding-top: 50px;
     gap: 80px;
   }
 }
@@ -254,6 +259,162 @@ address {
   .lyrics__text {
     font-size: 18px;
   }
+}
+
+.gallery {
+  padding-top: 20px;
+}
+@media screen and (min-width: 480px) {
+  .gallery {
+    padding-top: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-top: 50px;
+  }
+}
+
+.gallery__title {
+  font-size: 20px;
+  color: #212121;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 480px) {
+  .gallery__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .gallery__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__title {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+}
+
+.gallery__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+}
+@media screen and (min-width: 480px) {
+  .gallery__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.gallery__item {
+  background-color: #ffc1c1;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(102, 102, 102, 0.75);
+          box-shadow: 3px 3px 5px 0px rgba(102, 102, 102, 0.75);
+}
+
+.gallery__img {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.gallery-item__title {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.lightbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+}
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: initial;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox__content {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+.lightbox.is-open .lightbox__content {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.lightbox__button {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
+  transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
+}
+.lightbox__button:hover, .lightbox__button:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+  fill: #ff7398;
 }
 
 .menu-open {
@@ -319,6 +480,8 @@ address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 10, 10, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../images/background/mobile-menu-background.jpg");
+  background: linear-gradient(rgba(10, 10, 10, 0.1), rgba(0, 0, 0, 0.5)), url("../images/background/mobile-menu-background.jpg");
 }
 .menu-container.is-open {
   -webkit-transform: translateY(0);
@@ -339,8 +502,8 @@ address {
 }
 
 .menu-toggle__icon {
-  -webkit-transition: fill 250ms ease-in-out;
-  transition: fill 250ms ease-in-out;
+  -webkit-transition: fill 150ms ease-in-out;
+  transition: fill 150ms ease-in-out;
 }
 .menu-toggle:hover .menu-toggle__icon, .menu-toggle:focus .menu-toggle__icon {
   fill: #ff7398;
