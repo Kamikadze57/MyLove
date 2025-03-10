@@ -1,9 +1,13 @@
 const galleryItems = {
   minecraft: [
-    { preview: "./images/gallery/minecraft/territory.png", description: "Наш участок 🏡" },
-    { preview: "./images/gallery/minecraft/home.png", description: "Вид на домик 🏠" },
+    { preview: "./images/gallery/minecraft/home-back.png", description: "Вид на домик 🏠" },
+    { preview: "./images/gallery/minecraft/home-left.png", description: "Другой ракурс 🏠" },
     { preview: "./images/gallery/minecraft/heart.png", description: "Сердечко 💗" },
     { preview: "./images/gallery/minecraft/kitchen.png", description: "Хозяюшка на кухне 👀" },
+    { preview: "./images/gallery/minecraft/territory.png", description: "Наш участок 🏡" },
+    { preview: "./images/gallery/minecraft/territory-night.png", description: "Участок ночью 🌙" },
+    { preview: "./images/gallery/minecraft/mountain.png", description: "Жесткая гора 🗻" },
+    { preview: "./images/gallery/minecraft/tower.png", description: "Башенка 🗼" },
   ],
   gta: [
     { preview: "./images/gallery/gta/relaxation.png", description: "Вечерний отдых ✨" },

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Моей любимой 🤍</title>
+    <title>Сыграешь? 🤍</title>
     <link rel="icon" href="./images/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,7 +23,7 @@
         <nav class="nav">
           <ul class="nav__list list">
             <li class="nav__item">
-              <a class="nav__link link current" href="./index.html">Главная</a>
+              <a class="nav__link link" href="./index.html">Главная</a>
             </li>
             <li class="nav__item">
               <a class="nav__link link" href="./lyrics.html">Тексты</a>
@@ -32,7 +32,7 @@
               <a class="nav__link link" href="./gallery.html">Галерея</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link" href="./interactive.html">Интерактив</a>
+              <a class="nav__link link current" href="./interactive.html">Интерактив</a>
             </li>
           </ul>
         </nav>
@@ -44,10 +44,10 @@
           </button>
           <ul class="mobile-menu-pages list">
             <li class="mobile-menu-pages__item">
-              <svg class="mobile-menu-pages__icon current">
+              <svg class="mobile-menu-pages__icon">
                 <use href="./images/icons.svg#home"></use>
               </svg>
-              <a class="link mobile-menu-pages__link current" href="./index.html">Главная</a>
+              <a class="link mobile-menu-pages__link" href="./index.html">Главная</a>
             </li>
             <li class="mobile-menu-pages__item">
               <svg class="mobile-menu-pages__icon">
@@ -62,32 +62,44 @@
               <a class="link mobile-menu-pages__link" href="./gallery.html">Галерея</a>
             </li>
             <li class="mobile-menu-pages__item">
-              <svg class="mobile-menu-pages__icon">
+              <svg class="mobile-menu-pages__icon current">
                 <use href="./images/icons.svg#game"></use>
               </svg>
-              <a class="link mobile-menu-pages__link" href="./interactive.html">Интерактив</a>
+              <a class="link mobile-menu-pages__link current" href="./interactive.html">Интерактив</a>
             </li>
           </ul>
         </div>
       </div>
     </header>
     <main>
-      <section class="hero">
+      <section class="games">
         <div class="container">
-          <ul class="love__list list">
-            <li class="love__item">
-              <svg class="heart__svg">
-                <use href="./images/icons.svg#heart" data-love-heart></use>
-              </svg>
+          <h1 class="games__title title">Поиграем?</h1>
+          <ul class="games__list list">
+            <li class="games__item love-more">
+              <h2 class="games-item__title love-more__title">Чья любовь сильнее?</h2>
+              <div class="love-more-btn__container">
+                <button type="button" class="love-more__btn" lmMyBtn>Моя</button>
+                <button type="button" class="love-more__btn" lmYourBtn>Твоя</button>
+              </div>
+              <p class="games-item__text love-more__text" lmText>Как думаешь?</p>
             </li>
-            <li class="love__item">
-              <p class="love__text" data-love-text></p>
+            <li class="games__item love-strength">
+              <h2 class="games-item__title love-more__title">На сколько % я тебя люблю?</h2>
+              <div class="love-strength-input__container">
+                <input class="love-strength__input" type="number" name="love-strength" placeholder="Циферку" lsInput/>
+                <button class="love-strength__btn" type="button" lsCheckBtn>Проверить</button>
+              </div>
+              <div class="love-strength-output__container">
+                <p class="games-item__text love-strength__text" lsText>Угадаешь?</p>
+                <button class="love-strength-output__btn" type="button" lsSeeBtn>Показать</button>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <script type="module" src="./js/imgswap.js"></script>
+    <script type="module" src="./js/interactive.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
   </body>
 </html>

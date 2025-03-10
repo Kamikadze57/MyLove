@@ -1,0 +1,151 @@
+.games {
+  padding: 20px 0;
+  @media screen and (min-width: 480px) {
+    padding: 30px 0;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 40px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 50px 0;
+  }
+  //   Убрать высоту после обновы
+  height: 90vh;
+}
+.games__list {
+  @include flex(30px);
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 480px) {
+    gap: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 80px;
+    flex-direction: row;
+    align-items: start;
+  }
+}
+.games__item {
+  padding: 20px;
+  @include flex(10px);
+  flex-direction: column;
+  align-items: center;
+  background-color: $bg-pink;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 0px rgba(102, 102, 102, 0.75);
+  @media screen and (min-width: 480px) {
+    gap: 20px;
+    padding: 30px;
+  }
+}
+.games-item__title {
+  font-size: 16px;
+  color: $main-color;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 24px;
+  }
+}
+.love-more-btn__container {
+  @include flex(15px);
+}
+.love-more__btn {
+  padding: 5px 20px;
+  border: 1px solid #e37aca;
+  border-radius: 20px;
+  color: $main-color;
+  background-color: #e37aca;
+  font-size: 12px;
+  transition: all 250ms ease-in-out;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $bg-ligth-gray;
+    background-color: $accent-color;
+  }
+  &:disabled {
+    background-color: rgba(33, 33, 33, 0.3);
+    border: none;
+  }
+}
+.games-item__text {
+  font-size: 14px;
+  color: $main-color;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+}
+.love-strength-input__container {
+  display: flex;
+  justify-content: center;
+}
+.love-strength__input {
+  padding: 5px 15px;
+  outline: none;
+  width: 50%;
+  border: 1px solid $bg-pink;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  color: $main-color;
+&::placeholder {
+  font-size: 14px;
+  color: $accent-color;
+}
+}
+.love-strength__btn {
+  padding: 5px 10px;
+  color: $main-color;
+  border: 1px solid #e37aca;
+  background-color: #e37aca;
+  font-size: 12px;
+  transition: all 250ms ease-in-out;
+  margin-left: -30px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $bg-ligth-gray;
+    background-color: $accent-color;
+  }
+  &:disabled {
+    background-color: rgba(33, 33, 33, 0.3);
+    border: none;
+  }
+}
+.love-strength-output__btn {
+  padding: 5px 20px;
+  border: 1px solid #e37aca;
+  border-radius: 20px;
+  color: $main-color;
+  background-color: #e37aca;
+  font-size: 12px;
+  transition: all 250ms ease-in-out;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $bg-ligth-gray;
+    background-color: $accent-color;
+  }
+}
