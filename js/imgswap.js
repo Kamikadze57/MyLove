@@ -1,7 +1,7 @@
-const heart = document.querySelector('[data-love-heart]');
-const loveText = document.querySelector('[data-love-text]');
+const heart = document.querySelector("[loveHeart]");
+const loveText = document.querySelector("[loveText]");
 
-heart.addEventListener('click', () => {
-  heart.setAttribute('href', './images/icons.svg#clicked-heart'); 
-  loveText.textContent = 'Я тебя люблю 💖';
+heart.addEventListener("click", () => {
+  heart.setAttribute("href", "./images/icons.svg#clicked-heart");
+  loveText.textContent = "Я тебя люблю 💖";
 });

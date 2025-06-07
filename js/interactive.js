@@ -1,44 +1,48 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Чья любовь сильнее
+
+document.addEventListener("DOMContentLoaded", () => {
   const myButton = document.querySelector("[lmMyBtn]");
   const yourButton = document.querySelector("[lmYourBtn]");
-  const textElement = document.querySelector("[lmText]");
+  const lmText = document.querySelector("[lmText]");
 
   let mySize = 1;
   let yourSize = 1;
   let count = 0;
 
-  myButton.addEventListener("click", function () {
+  myButton.addEventListener("click", () => {
     if (count < 5) {
-      mySize -= 0.1;
-      yourSize += 0.1;
-      myButton.style.transform = `scale(${mySize})`;
-      yourButton.style.transform = `scale(${yourSize})`;
+      myButton.style.transform = `scale(${(mySize -= 0.1)})`;
+      yourButton.style.transform = `scale(${(yourSize += 0.1)})`;
       count++;
     } else {
       myButton.style.display = "none";
     }
-    textElement.textContent = "Попробуй еще";
-    textElement.style.color = "#980000";
+    lmText.textContent = "Попробуй еще";
+    lmText.style.color = "#980000";
   });
 
-  yourButton.addEventListener("click", function () {
-    textElement.textContent = "Правильно";
-    textElement.style.color = "#00981c";
+  yourButton.addEventListener("click", () => {
+    lmText.textContent = "Правильно";
+    lmText.style.color = "#00981c";
+
     myButton.style.transform = "scale(1)";
     myButton.style.display = "inline-block";
     myButton.disabled = true;
     myButton.style.cursor = "default";
+
     yourButton.style.transform = "scale(1)";
     yourButton.style.backgroundColor = "#00981c";
     yourButton.style.border = "none";
     yourButton.style.cursor = "default";
-    mySize = 1;
-    yourSize = 1;
+
+    mySize = yourSize = 1;
     count = 0;
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+// На сколько % я тебя люблю
+
+document.addEventListener("DOMContentLoaded", () => {
   const lsInput = document.querySelector("[lsInput]");
   const lsCheckBtn = document.querySelector("[lsCheckBtn]");
   const lsSeeBtn = document.querySelector("[lsSeeBtn]");
@@ -46,38 +50,163 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let lsSeeBtnSize = 1;
   let lsSeeBtnClicks = 0;
-
   lsSeeBtn.style.display = "none";
 
-  lsCheckBtn.addEventListener("click", function () {
-    const inputValue = lsInput.value;
-
-    if (inputValue === "") {
+  lsCheckBtn.addEventListener("click", () => {
+    if (!lsInput.value) {
       lsText.textContent = "Введи любое значение";
-    } else {
-      lsText.textContent = "Попробуй еще";
-      lsSeeBtn.style.display = "inline-block";
-
-      if (lsSeeBtnClicks < 5) {
-        lsSeeBtnSize += 0.1;
-        lsSeeBtn.style.transform = `scale(${lsSeeBtnSize})`;
-        lsSeeBtnClicks++;
-      }
-      if (lsSeeBtnClicks >= 5) {
-        lsInput.disabled = true;
-        lsCheckBtn.disabled = true;
-        lsCheckBtn.style.cursor = "default";
-      }
+      return;
+    }
+    lsText.textContent = "Попробуй еще";
+    lsSeeBtn.style.display = "inline-block";
+    if (lsSeeBtnClicks < 5) {
+      lsSeeBtn.style.transform = `scale(${(lsSeeBtnSize += 0.1)})`;
+      lsSeeBtnClicks++;
+    }
+    if (lsSeeBtnClicks >= 5) {
+      lsInput.disabled = lsCheckBtn.disabled = true;
+      lsCheckBtn.style.cursor = "default";
     }
   });
 
-  lsSeeBtn.addEventListener("click", function () {
+  lsSeeBtn.addEventListener("click", () => {
     lsText.textContent = "Моя любовь к тебе безгранична.";
     lsSeeBtn.style.display = "none";
     lsSeeBtn.style.transform = "scale(1)";
-    lsInput.disabled = true;
-    lsCheckBtn.disabled = true;
+    lsInput.disabled = lsCheckBtn.disabled = true;
     lsSeeBtnClicks = 0;
     lsSeeBtnSize = 1;
   });
+});
+
+// Множество причин почему люблю
+
+const reasons = [
+  "Она всегда рядом, когда тебе плохо.",
+  "Она может заставить тебя улыбаться даже в самый пасмурный день.",
+  "Она не просто слушает, а действительно слышит.",
+  "Её смех — это как музыка для души.",
+  "Она поддерживает в любой ситуации.",
+  "Когда ты рядом с ней, чувствуешь себя дома.",
+  "Она невероятно умная, и её мысли всегда вдохновляют.",
+  "Она верит в тебя, когда ты сам в себя не веришь.",
+  "Она всегда находит время, чтобы сделать тебе приятно.",
+  "Она никогда не ставит себя выше других.",
+  "Её взгляд на мир — всегда с оптимизмом.",
+  "Она помогает тебе стать лучшей версией себя.",
+  "Она чувствует, что тебе нужно, даже если ты не сказал ни слова.",
+  "Она не боится быть уязвимой.",
+  "Она знает, как поддержать в самый трудный момент.",
+  "Она искренно радуется твоим победам.",
+  "Она помогает тебе смеяться, когда тебе не до этого.",
+  "Её объятия — это всегда безопасное место.",
+  "Она искренне интересуется твоими мыслями и чувствами.",
+  "Она ценит мелочи, которые делают каждый день особенным.",
+  "Она уважает твои границы, но при этом умеет удивлять.",
+  "Она всегда остаётся собой, не пытаясь угодить другим.",
+  "С ней никогда не бывает скучно — она всегда находит повод для приключений.",
+  "Она дарит тебе свободу быть тем, кто ты есть.",
+  "Её чувства настоящие, без притворства.",
+  "Она может быть сильной, когда нужно, и мягкой, когда нужно.",
+  "Она поддерживает тебя в любых начинаниях.",
+  "Она искренне заботится о твоём благополучии.",
+  "Она всегда знает, как подбодрить, когда ты в унынии.",
+  "Она любит тебя таким, какой ты есть, не пытаясь изменять.",
+  "Она всегда проявляет заботу даже в мелочах.",
+  "Она даёт тебе пространство для роста, но всегда рядом.",
+  "Она может поддержать разговор на любую тему.",
+  "Её любопытство и стремление к знаниям вдохновляют.",
+  "Она не боится показывать свои слабости.",
+  "Она верит в тебя, даже когда все вокруг сомневаются.",
+  "Она умеет быть одновременно сильной и нежной.",
+  "Она всегда готова помочь, даже если это требует усилий.",
+  "Она искренне радуется твоим маленьким успехам.",
+  "Она вдохновляет тебя на новые идеи.",
+  "Она понимает, что нужно сделать, чтобы тебе стало легче.",
+  "Она с радостью делится с тобой своими переживаниями.",
+  "Она всегда находит время, чтобы послушать твои истории.",
+  "Она остаётся верной своим принципам, несмотря на трудности.",
+  "Она не жалеет времени на тебя, даже если занята.",
+  "Она умеет быть заботливой, но не навязчивой.",
+  "Она всегда готова поделиться своим временем, чтобы тебе было комфортно.",
+  "Она любит твою странность и особенности, не пытаясь их изменить.",
+  "Она не боится быть открытой и честной.",
+  "Она гордится твоими достижениями, даже если они кажутся тебе незначительными.",
+  "Она способна рассмешить в самый сложный момент.",
+  "Она знает, как сделать твой день лучше, просто появившись.",
+  "Она открыта для новых идей и всегда готова попробовать что-то новое.",
+  "Она всегда помогает тебе подняться после падений.",
+  "Она находит радость в совместных прогулках и тихих вечерах.",
+  "Она ценит честность в отношениях и сама всегда искренняя.",
+  "Она вдохновляет тебя на достижение целей и преодоление трудностей.",
+  "Она знает, как найти баланс между заботой о тебе и личным пространством.",
+  "Она умеет слушать и поддерживать твои мечты.",
+  "Она всегда с тобой в самые сложные моменты.",
+  "Она не осуждает, а поддерживает, когда ты ошибаешься.",
+  "Она всегда находит повод для маленьких радостей и удивлений.",
+  "Её уверенность вдохновляет, и ты начинаешь верить в себя.",
+  "Она дарит тебе пространство для личных интересов и хобби.",
+  "Она никогда не забывает о важных датах и событиях.",
+  "Она умеет показывать свою любовь не только словами, но и поступками.",
+  "Она умеет быть твоим другом, а не только возлюбленной.",
+  "Она находит способы расслабиться и наслаждаться моментом.",
+  "Она поддерживает твои мечты, даже если они кажутся ей далёкими.",
+  "Она искренне радуется твоему счастью, а не завидует ему.",
+  "Она умеет ценить простые моменты в жизни.",
+  "Она всегда готова к компромиссам ради гармонии.",
+  "Она умеет вносить разнообразие в повседневную жизнь.",
+  "Она ценит твою индивидуальность и уважает твои границы.",
+  "Она умеет смеяться над собой и не воспринимать жизнь слишком серьёзно.",
+  "Она легко справляется с трудностями и не сдается.",
+  "Она всегда поддерживает твоё стремление к лучшему.",
+  "Она открыта для обсуждения любых проблем и конфликтов.",
+  "Она может быть твоим лучшим другом и поддержкой в любое время.",
+  "Она показывает свою любовь через внимание и заботу.",
+  "Она вдохновляет на действия и веру в себя.",
+  "Она привносит свет и тепло в твою жизнь.",
+  "Она не боится быть собой и чувствует себя комфортно в любых ситуациях.",
+  "Она разделяет твои интересы и увлечения, даже если они не совпадают с её.",
+  "Она заботится о твоем здоровье и благополучии.",
+  "Она уважает твои мнения и принимает твои решения.",
+  "Она всегда находит время, чтобы выразить свои чувства.",
+  "Она умеет быть сильной и независимой, но при этом мягкой и нежной.",
+  "Она дарит тебе чувство спокойствия и умиротворенности.",
+  "Она никогда не оставляет тебя в одиночестве в трудные моменты.",
+  "Она умеет радоваться мелочам жизни, наполняя каждый день смыслом.",
+  "Она остаётся верной своим убеждениям и принципам, несмотря на обстоятельства.",
+  "Она принимает твои недостатки и любит за них.",
+  "Она создаёт атмосферу уюта и безопасности в любой ситуации.",
+  "Она всегда готова поддержать тебя в новых начинаниях.",
+  "Она умеет быть терпеливой, когда нужно дать тебе время.",
+  "Она прекрасно понимает, когда тебе нужно побыть одному, и не навязывается.",
+  "Она дарит тебе уверенность в том, что все возможно.",
+  "Она никогда не боится быть уязвимой.",
+  "Она умеет преодолевать любые преграды, чтобы быть с тобой.",
+];
+
+const reasonsText = document.querySelector("[lrText]");
+const reasonsBtn = document.querySelector("[lrBtn]");
+
+let intervalID;
+
+function updateReasonText() {
+  let index = Math.floor(Math.random() * reasons.length);
+  reasonsText.textContent = reasons[index];
+}
+function startInterval() {
+  if (intervalID) {
+    clearInterval(intervalID);
+  }
+  intervalID = setInterval(updateReasonText, 10000);
+}
+updateReasonText();
+startInterval();
+
+reasonsBtn.addEventListener("click", () => {
+  reasonsBtn.classList.add("rotating");
+  setTimeout(() => {
+    reasonsBtn.classList.remove("rotating");
+    updateReasonText();
+    startInterval();
+  }, 500);
 });

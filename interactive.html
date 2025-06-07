@@ -15,7 +15,7 @@
     <header class="header">
       <div class="container header__container">
         <a class="logo" href="./index.html"><img src="./images/favicon.png" alt="logo" /></a>
-        <button class="menu-open" aria-expanded="false" aria-controls="mobile-menu" data-open-mobile>
+        <button class="menu-open" aria-expanded="false" aria-controls="mobile-menu" openMobile>
           <svg class="mobile-menu__icon">
             <use href="./images/icons.svg#menu"></use>
           </svg>
@@ -36,8 +36,8 @@
             </li>
           </ul>
         </nav>
-        <div class="menu-container" id="mobile-menu" data-mobile>
-          <button class="menu-toggle" data-close-mobile>
+        <div class="menu-container" id="mobile-menu" mobile>
+          <button class="menu-toggle" closeMobile>
             <svg class="menu-toggle__icon" width="24" height="24">
               <use href="./images/icons.svg#close"></use>
             </svg>
@@ -74,31 +74,57 @@
     <main>
       <section class="games">
         <div class="container">
-          <h1 class="games__title title">Поиграем?</h1>
+          <h1 class="title">Поиграем?</h1>
           <ul class="games__list list">
-            <li class="games__item love-more">
-              <h2 class="games-item__title love-more__title">Чья любовь сильнее?</h2>
-              <div class="love-more-btn__container">
-                <button type="button" class="love-more__btn" lmMyBtn>Моя</button>
-                <button type="button" class="love-more__btn" lmYourBtn>Твоя</button>
+            <li class="games__item">
+              <h2 class="games-item__title">Чья любовь сильнее?</h2>
+              <div class="love-more-btn__box">
+                <button type="button" class="games-button" lmMyBtn>Моя</button>
+                <button type="button" class="games-button" lmYourBtn>Твоя</button>
               </div>
-              <p class="games-item__text love-more__text" lmText>Как думаешь?</p>
+              <p class="games-item__text" lmText>Как думаешь?</p>
             </li>
-            <li class="games__item love-strength">
-              <h2 class="games-item__title love-more__title">На сколько % я тебя люблю?</h2>
-              <div class="love-strength-input__container">
-                <input class="love-strength__input" type="number" name="love-strength" placeholder="Циферку" lsInput/>
-                <button class="love-strength__btn" type="button" lsCheckBtn>Проверить</button>
+            <li class="games__item">
+              <h2 class="games-item__title">На сколько % я тебя люблю?</h2>
+              <div class="love-strength-input__box">
+                <input class="love-strength__input" type="number" name="love-strength" placeholder="Циферку" lsInput />
+                <button class="love-strength__btn games-button" type="button" lsCheckBtn>Проверить</button>
               </div>
-              <div class="love-strength-output__container">
-                <p class="games-item__text love-strength__text" lsText>Угадаешь?</p>
-                <button class="love-strength-output__btn" type="button" lsSeeBtn>Показать</button>
+              <div class="love-strength-output__box">
+                <p class="games-item__text" lsText>Угадаешь?</p>
+                <button class="games-button" type="button" lsSeeBtn>Показать</button>
               </div>
+            </li>
+            <li class="games__item">
+              <h2 class="games-item__title">Причины тебя любить</h2>
+              <p class="games-item__text lr-text" lrText></p>
+              <button type="button" class="lr-btn" lrBtn>
+                <svg class="lr-btn__svg">
+                  <use href="./images/icons.svg#create"></use>
+                </svg>
+              </button>
             </li>
           </ul>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="footer__logo" href="./index.html"><img src="./images/favicon.png" alt="logo" /></a>
+        <div class="footer-link__box">
+          <a class="footer__link" href="https://discordapp.com/users/670326178380251147/" target="_blank">
+            <svg class="footer-link__svg">
+              <use href="./images/icons.svg#discord"></use>
+            </svg>
+          </a>
+          <a class="footer__link" href="https://github.com/Kamikadze57" target="_blank">
+            <svg class="footer-link__svg">
+              <use href="./images/icons.svg#github"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./js/interactive.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
   </body>

@@ -24,7 +24,10 @@ const galleries = {
 
 const lightbox = document.querySelector("[lightbox]");
 const galleryImage = document.querySelector("[galleryImage]");
-const lightboxClose = () => lightbox.classList.remove("is-open");
+const lightboxClose = () => {
+  lightbox.classList.remove("is-open");
+  document.body.style.overflow = "auto";
+}
 
 const renderGallery = (gallery, items) => {
   gallery.innerHTML = items
@@ -56,6 +59,7 @@ const openLightbox = (items, index) => {
   currentIndex = index;
   galleryImage.src = currentItems[index].preview;
   lightbox.classList.add("is-open");
+  document.body.style.overflow = "hidden";
 };
 
 galleryImage.addEventListener("click", lightboxClose);

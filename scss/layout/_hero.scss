@@ -1,14 +1,13 @@
 .love__list {
-  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .heart__svg {
-  cursor: pointer;
   width: 260px;
   height: 260px;
-  @media screen and (min-width: 468px) {
+  cursor: url("../images/cursor/pointer.png"), pointer;
+  @media screen and (min-width: 480px) {
     width: 350px;
     height: 350px;
   }

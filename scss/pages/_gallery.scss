@@ -32,7 +32,7 @@
   box-shadow: 3px 3px 5px 0px rgba(102, 102, 102, 0.75);
 }
 .gallery__img {
-  cursor: zoom-in;
+  cursor: url("../images/cursor/zoom-in.png"), zoom-in;
 }
 .gallery-item__title {
   font-size: 16px;
@@ -56,7 +56,7 @@
   &.is-open {
     opacity: 1;
     pointer-events: initial;
-    cursor: zoom-out;
+    cursor: url("../images/cursor/zoom-out.png"), zoom-out;
   }
 }
 .lightbox__overlay {
@@ -83,7 +83,6 @@
   border: none;
   border-radius: 50%;
   background-color: transparent;
-  cursor: pointer;
   transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
   &:hover,
   &:focus {

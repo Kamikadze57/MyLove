@@ -1,0 +1,35 @@
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid $accent-color;
+  background-image: url("../images/background/header-background.jpg");
+  background-size: contain;
+  @media screen and (min-width: 768px) {
+    padding: 15px 0;
+  }
+}
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-link__box {
+  @include flex(10px);
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    gap: 20px;
+  }
+}
+.footer-link__svg {
+  width: 30px;
+  height: 30px;
+  fill: $main-color;
+  transition: fill 350ms ease-in-out, transform 350ms ease-in-out;
+  &:hover, &:focus {
+    fill: $accent-color;
+    transform: scale(1.1) rotate(360deg);
+  }
+  @media screen and (min-width: 480px) {
+    width: 40px;
+    height: 40px;
+  }
+}

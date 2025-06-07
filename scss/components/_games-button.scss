@@ -1,0 +1,25 @@
+.games-button {
+  color: $main-color;
+  padding: 5px 20px;
+  border: 1px solid $soft-pink;
+  border-radius: 20px;
+  color: $main-color;
+  background-color: $soft-pink;
+  font-size: 12px;
+  transition: border 250ms ease-in-out, background-color 250ms ease-in-out, transform 250ms ease-in-out;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $bg-ligth-gray;
+    background-color: $accent-color;
+  }
+  &:disabled {
+    background-color: rgba(33, 33, 33, 0.3);
+    border: none;
+  }
+}
